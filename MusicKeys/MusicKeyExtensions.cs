@@ -1,38 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MusicKeys
 {
     /// <summary>
-    /// Extension of the Key class with methods returning the short name, full name, and information whether it is a major key.
+    /// Extension methods for MusicKey: return short name, long name, and major/minor mode.
     /// </summary>
-    public static class KeyExtensions
+    public static class MusicKeyExtensions
     {
         public static string GetShortName(this MusicKey key)
         {
-            var field = key.GetType().GetField(key.ToString());
-            if (field == null) return key.ToString();
-            var attribute = (KeyDescriptionAttribute?)Attribute.GetCustomAttribute(field, typeof(KeyDescriptionAttribute));
-            return attribute == null ? key.ToString() : attribute.ShortName;
+            var attr = GetAttribute(key);
+            return attr?.ShortName ?? key.ToString();
         }
 
         public static string GetLongName(this MusicKey key)
         {
-            var field = key.GetType().GetField(key.ToString());
-            if (field == null) return key.ToString();
-            var attribute = (KeyDescriptionAttribute?)Attribute.GetCustomAttribute(field, typeof(KeyDescriptionAttribute));
-            return attribute == null ? key.ToString() : attribute.LongName;
+            var attr = GetAttribute(key);
+            return attr?.LongName ?? key.ToString();
         }
 
         public static bool IsMajor(this MusicKey key)
         {
+            var attr = GetAttribute(key);
+            return attr?.IsMajor ?? false;
+        }
+
+        private static KeyDescriptionAttribute? GetAttribute(MusicKey key)
+        {
             var field = key.GetType().GetField(key.ToString());
-            if (field == null) return false;
-            var attribute = (KeyDescriptionAttribute?)Attribute.GetCustomAttribute(field, typeof(KeyDescriptionAttribute));
-            return attribute != null && attribute.IsMajor;
+            return field != null ? (KeyDescriptionAttribute?)Attribute.GetCustomAttribute(field, typeof(KeyDescriptionAttribute)) : null;
         }
     }
 }

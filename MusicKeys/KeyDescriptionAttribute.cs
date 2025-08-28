@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MusicKeys
 {
     /// <summary>
-    /// atrybut opisujący tonację muzyczną 
+    /// Attribute describing a musical key (short name, full name, major/minor mode).
     /// </summary>
     [AttributeUsage(AttributeTargets.Field, Inherited = false, AllowMultiple = false)]
-    sealed class KeyDescriptionAttribute : Attribute
+    public sealed class KeyDescriptionAttribute : Attribute
     {
         public string ShortName { get; }
         public string LongName { get; }

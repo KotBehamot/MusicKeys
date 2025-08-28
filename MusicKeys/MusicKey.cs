@@ -1,38 +1,38 @@
 ﻿namespace MusicKeys
 {
     /// <summary>
-    /// mapa tonacji muzycznych 
+    /// Enum representing musical keys with descriptive attributes.
     /// </summary>
     public enum MusicKey
     {
-        [KeyDescription("C", "C-dur", true)] C,
-        [KeyDescription("C#", "C#-dur", true)] CSharp,
-        [KeyDescription("D", "D-dur", true)] D,
-        [KeyDescription("D#", "D#-dur", true)] DSharp,
-        [KeyDescription("E", "E-dur", true)] E,
-        [KeyDescription("F", "F-dur", true)] F,
-        [KeyDescription("F#", "F#-dur", true)] FSharp,
-        [KeyDescription("G", "G-dur", true)] G,
-        [KeyDescription("G#", "G#-dur", true)] GSharp,
-        [KeyDescription("A", "A-dur", true)] A,
-        [KeyDescription("A#", "A#-dur", true)] ASharp,
-        [KeyDescription("B", "B-dur", true)] B,
-        [KeyDescription("Db", "Db-dur", true)] Db,
-        [KeyDescription("Eb", "Eb-dur", true)] Eb,
-        [KeyDescription("Gb", "Gb-dur", true)] Gb,
-        [KeyDescription("Ab", "Ab-dur", true)] Ab,
-        [KeyDescription("Bb", "Bb-dur", true)] Bb,
-        [KeyDescription("a", "A-moll", false)] a,
-        [KeyDescription("c#", "C#-moll", false)] cSharp,
-        [KeyDescription("d", "D-moll", false)] d,
-        [KeyDescription("d#", "D#-moll", false)] dSharp,
-        [KeyDescription("e", "E-moll", false)] e,
-        [KeyDescription("f", "F-moll", false)] f,
-        [KeyDescription("f#", "F#-moll", false)] fSharp,
-        [KeyDescription("g", "G-moll", false)] g,
-        [KeyDescription("g#", "G#-moll", false)] gSharp,
-        [KeyDescription("b", "B-moll", false)] b,
-        [KeyDescription("a#", "A#-moll", false)] aSharp,
-        [KeyDescription("c", "C-moll", false)] c
+        [KeyDescription("C", "C major", true)] C,
+        [KeyDescription("C#", "C# major", true)] CSharp,
+        [KeyDescription("D", "D major", true)] D,
+        [KeyDescription("D#", "D# major", true)] DSharp,
+        [KeyDescription("E", "E major", true)] E,
+        [KeyDescription("F", "F major", true)] F,
+        [KeyDescription("F#", "F# major", true)] FSharp,
+        [KeyDescription("G", "G major", true)] G,
+        [KeyDescription("G#", "G# major", true)] GSharp,
+        [KeyDescription("A", "A major", true)] A,
+        [KeyDescription("A#", "A# major", true)] ASharp,
+        [KeyDescription("B", "B major", true)] B,
+        [KeyDescription("Db", "Db major", true)] Db,
+        [KeyDescription("Eb", "Eb major", true)] Eb,
+        [KeyDescription("Gb", "Gb major", true)] Gb,
+        [KeyDescription("Ab", "Ab major", true)] Ab,
+        [KeyDescription("Bb", "Bb major", true)] Bb,
+        [KeyDescription("a", "A minor", false)] a,
+        [KeyDescription("c#", "C# minor", false)] cSharp,
+        [KeyDescription("d", "D minor", false)] d,
+        [KeyDescription("d#", "D# minor", false)] dSharp,
+        [KeyDescription("e", "E minor", false)] e,
+        [KeyDescription("f", "F minor", false)] f,
+        [KeyDescription("f#", "F# minor", false)] fSharp,
+        [KeyDescription("g", "G minor", false)] g,
+        [KeyDescription("g#", "G# minor", false)] gSharp,
+        [KeyDescription("b", "B minor", false)] b,
+        [KeyDescription("a#", "A# minor", false)] aSharp,
+        [KeyDescription("c", "C minor", false)] c
     }
 }

@@ -1,32 +1,27 @@
 # MusicKeys
 
-.NET 8 library containing an enum defining musical keys and extension methods for retrieving key descriptions.
+A .NET library for representing and handling musical keys (major/minor) with descriptive attributes.
 
 ## Features
+- `MusicKey` enum with key descriptions (short and long name, major/minor mode)
+- `KeyDescriptionAttribute` for describing each key
+- Extension methods:
+  - `GetShortName()` — returns the short name of the key
+  - `GetLongName()` — returns the full name of the key
+  - `IsMajor()` — indicates if the key is major
 
-- Defines musical keys using an enum.
-- Provides extension methods to get the short name, full name, and whether the key is major.
+## Usage Example
+```csharp
+using MusicKeys;
 
-## Installation
+var key = MusicKey.CSharp;
+Console.WriteLine(key.GetShortName()); // C#
+Console.WriteLine(key.GetLongName());  // C# major
+Console.WriteLine(key.IsMajor());      // True
+```
 
-To install the library, use the NuGet package manager:
-TODO?:
-## Usage
+## Requirements
+- .NET 9.0
 
-Here's an example of how to use the `MusicKeys` library:
-class Program
-{ 
-static void Main() 
-{ 
-MusicKey key = MusicKey.C; 
-Console.WriteLine($"Short Name: {key.GetShortName()}"); // Output: C 
-Console.WriteLine($"Long Name: {key.GetLongName()}");   // Output: C-dur 
-Console.WriteLine($"Is Major: {key.IsMajor()}");        // Output: True 
-} }
-## Extension Methods
-
-The library provides the following extension methods for the `MusicKey` enum:
-
-- `GetShortName()`: Returns the short name of the key.
-- `GetLongName()`: Returns the full name of the key.
-- `IsMajor()`: Returns whether the key is major.
+## License
+Apache 2.0
