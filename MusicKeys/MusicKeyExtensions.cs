@@ -27,10 +27,10 @@ namespace MusicKeys.Extensions
             return attr?.IsMajor ?? false;
         }
 
-        private static MusicKeyDescriptionAttribute? GetAttribute(MusicKey key)
+        private static MusicKeyDescriptionAttribute GetAttribute(MusicKey key)
         {
             var field = key.GetType().GetField(key.ToString());
-            return field != null ? (MusicKeyDescriptionAttribute?)Attribute.GetCustomAttribute(field, typeof(MusicKeyDescriptionAttribute)) : null;
+            return field != null ? (MusicKeyDescriptionAttribute)Attribute.GetCustomAttribute(field, typeof(MusicKeyDescriptionAttribute)) : null;
         }
     }
 }
