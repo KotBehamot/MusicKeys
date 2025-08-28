@@ -1,6 +1,8 @@
 ﻿using System;
+using MusicKeys.Enums;
+using MusicKeys.Attributes;
 
-namespace MusicKeys
+namespace MusicKeys.Extensions
 {
     /// <summary>
     /// Extension methods for MusicKey: return short name, long name, and major/minor mode.
@@ -25,10 +27,10 @@ namespace MusicKeys
             return attr?.IsMajor ?? false;
         }
 
-        private static KeyDescriptionAttribute? GetAttribute(MusicKey key)
+        private static MusicKeyDescriptionAttribute? GetAttribute(MusicKey key)
         {
             var field = key.GetType().GetField(key.ToString());
-            return field != null ? (KeyDescriptionAttribute?)Attribute.GetCustomAttribute(field, typeof(KeyDescriptionAttribute)) : null;
+            return field != null ? (MusicKeyDescriptionAttribute?)Attribute.GetCustomAttribute(field, typeof(MusicKeyDescriptionAttribute)) : null;
         }
     }
 }

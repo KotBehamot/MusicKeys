@@ -1,38 +1,40 @@
-﻿namespace MusicKeys
+﻿using MusicKeys.Attributes;
+
+namespace MusicKeys.Enums
 {
     /// <summary>
     /// Enum representing musical keys with descriptive attributes.
     /// </summary>
     public enum MusicKey
     {
-        [KeyDescription("C", "C major", true)] C,
-        [KeyDescription("C#", "C# major", true)] CSharp,
-        [KeyDescription("D", "D major", true)] D,
-        [KeyDescription("D#", "D# major", true)] DSharp,
-        [KeyDescription("E", "E major", true)] E,
-        [KeyDescription("F", "F major", true)] F,
-        [KeyDescription("F#", "F# major", true)] FSharp,
-        [KeyDescription("G", "G major", true)] G,
-        [KeyDescription("G#", "G# major", true)] GSharp,
-        [KeyDescription("A", "A major", true)] A,
-        [KeyDescription("A#", "A# major", true)] ASharp,
-        [KeyDescription("B", "B major", true)] B,
-        [KeyDescription("Db", "Db major", true)] Db,
-        [KeyDescription("Eb", "Eb major", true)] Eb,
-        [KeyDescription("Gb", "Gb major", true)] Gb,
-        [KeyDescription("Ab", "Ab major", true)] Ab,
-        [KeyDescription("Bb", "Bb major", true)] Bb,
-        [KeyDescription("a", "A minor", false)] a,
-        [KeyDescription("c#", "C# minor", false)] cSharp,
-        [KeyDescription("d", "D minor", false)] d,
-        [KeyDescription("d#", "D# minor", false)] dSharp,
-        [KeyDescription("e", "E minor", false)] e,
-        [KeyDescription("f", "F minor", false)] f,
-        [KeyDescription("f#", "F# minor", false)] fSharp,
-        [KeyDescription("g", "G minor", false)] g,
-        [KeyDescription("g#", "G# minor", false)] gSharp,
-        [KeyDescription("b", "B minor", false)] b,
-        [KeyDescription("a#", "A# minor", false)] aSharp,
-        [KeyDescription("c", "C minor", false)] c
+        [MusicKeyDescription("C", "C major", true)] CMajor,
+        [MusicKeyDescription("C#", "C# major", true)] CSharpMajor,
+        [MusicKeyDescription("D", "D major", true)] DMajor,
+        [MusicKeyDescription("D#", "D# major", true)] DSharpMajor,
+        [MusicKeyDescription("E", "E major", true)] EMajor,
+        [MusicKeyDescription("F", "F major", true)] FMajor,
+        [MusicKeyDescription("F#", "F# major", true)] FSharpMajor,
+        [MusicKeyDescription("G", "G major", true)] GMajor,
+        [MusicKeyDescription("G#", "G# major", true)] GSharpMajor,
+        [MusicKeyDescription("A", "A major", true)] AMajor,
+        [MusicKeyDescription("A#", "A# major", true)] ASharpMajor,
+        [MusicKeyDescription("B", "B major", true)] BMajor,
+        [MusicKeyDescription("Db", "Db major", true)] DbMajor,
+        [MusicKeyDescription("Eb", "Eb major", true)] EbMajor,
+        [MusicKeyDescription("Gb", "Gb major", true)] GbMajor,
+        [MusicKeyDescription("Ab", "Ab major", true)] AbMajor,
+        [MusicKeyDescription("Bb", "Bb major", true)] BbMajor,
+        [MusicKeyDescription("A", "A minor", false)] AMinor,
+        [MusicKeyDescription("C#", "C# minor", false)] CSharpMinor,
+        [MusicKeyDescription("D", "D minor", false)] DMinor,
+        [MusicKeyDescription("D#", "D# minor", false)] DSharpMinor,
+        [MusicKeyDescription("E", "E minor", false)] EMinor,
+        [MusicKeyDescription("F", "F minor", false)] FMinor,
+        [MusicKeyDescription("F#", "F# minor", false)] FSharpMinor,
+        [MusicKeyDescription("G", "G minor", false)] GMinor,
+        [MusicKeyDescription("G#", "G# minor", false)] GSharpMinor,
+        [MusicKeyDescription("B", "B minor", false)] BMinor,
+        [MusicKeyDescription("A#", "A# minor", false)] ASharpMinor,
+        [MusicKeyDescription("C", "C minor", false)] CMinor
     }
 }
