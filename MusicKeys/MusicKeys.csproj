@@ -4,6 +4,39 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>disable</Nullable>
+    <LangVersion>7.3</LangVersion>
+
+    <!-- NuGet package metadata -->
+    <PackageId>MusicKeys</PackageId>
+    <Version>1.0.5</Version>
+    <Authors>KotBehamot</Authors>
+    <Company>KotBehamot</Company>
+    <Product>MusicKeys</Product>
+    <Description>A lightweight .NET library exposing a strongly-typed musical key enum (major/minor) with attributes and handy extension methods for names and mode.</Description>
+    <PackageTags>music;music-theory;keys;enum;attributes;dotnet-standard</PackageTags>
+    <RepositoryUrl>https://github.com/KotBehamot/MusicKeys</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/KotBehamot/MusicKeys</PackageProjectUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageReleaseNotes>1.0.5: Maintenance release with documentation and packaging metadata updates.</PackageReleaseNotes>
+
+    <!-- Build/pack settings -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSymbols>false</IncludeSymbols>
+    <IncludeSource>false</IncludeSource>
   </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Include root README and LICENSE in the package -->
+    <None Include="../README.md" Pack="true" PackagePath="/" />
+    <None Include="../LICENSE.txt" Pack="true" PackagePath="/" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+  </ItemGroup>
 
 </Project>
