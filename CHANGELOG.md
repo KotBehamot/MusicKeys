@@ -5,6 +5,9 @@ All notable changes to this project will be documented in this file.
 ## Unreleased
 - Placeholder for upcoming changes.
 
+## 1.1.0 - 2025-10-27
+- Minor release; packaging/CI stabilization. No functional changes since 1.0.6.
+
 ## 1.0.6 - 2025-10-27
 - Fix CI workflow YAML and minor maintenance.
 

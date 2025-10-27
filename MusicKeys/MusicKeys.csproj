@@ -8,7 +8,7 @@
 
     <!-- NuGet package metadata -->
     <PackageId>MusicKeys</PackageId>
-    <Version>1.0.6</Version>
+    <Version>1.1.0</Version>
     <Authors>KotBehamot</Authors>
     <Company>KotBehamot</Company>
     <Product>MusicKeys</Product>
@@ -21,7 +21,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <PackageReleaseNotes>1.0.6: CI workflow fixes and minor maintenance.</PackageReleaseNotes>
+    <PackageReleaseNotes>1.1.0: Minor release; packaging/CI stabilization. No functional changes since1.0.6.</PackageReleaseNotes>
 
     <!-- Build/pack settings -->
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
