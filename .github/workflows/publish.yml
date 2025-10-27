@@ -134,10 +134,10 @@ ${{ inputs.notes }}"
           fi
 
       - name: Restore
-        run: dotnet restore
+        run: dotnet restore MusicKeys/MusicKeys.csproj
 
       - name: Build
-        run: dotnet build -c Release --no-restore
+        run: dotnet build MusicKeys/MusicKeys.csproj -c Release --no-restore
 
       - name: Pack MusicKeys
         run: |
