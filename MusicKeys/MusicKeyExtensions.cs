@@ -59,7 +59,7 @@ namespace MusicKeys.Extensions
  var type = typeof(MusicKey);
  foreach (var name in Enum.GetNames(type))
  {
- var field = type.GetField(name);
+ var field = type.GetField(name, System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
  if (field == null) continue;
  var attr = (MusicKeyDescriptionAttribute)Attribute.GetCustomAttribute(field, typeof(MusicKeyDescriptionAttribute));
  MusicKey parsed;
